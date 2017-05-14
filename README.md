@@ -6,12 +6,12 @@ Need this for a Pen
 Call the API with your choice of `GET`, `PUT`, `POST`, `DELETE`, a timeout in miliseconds, and a status code you want returned:
 
 ```
-http://timeout-as-a-service.heroku.com/<timeout-in_miliseconds>/<status_code>
+https://timeout-as-a-service.herokuapp.com/<timeout-in_miliseconds>/<status_code>
 ```
 
 ## So, like:
 
-[http://timeout-as-a-service.heroku.com/2000/418](http://timeout-as-a-service.heroku.com/2000/418)
+[https://timeout-as-a-service.herokuapp.com/5000/418](https://timeout-as-a-service.herokuapp.com/5000/418)
 
 # License
 
