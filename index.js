@@ -4,6 +4,9 @@ wait = (req, res, next) => {
     let waitTime = parseInt(req.params.time, 10);
     let status = parseInt(req.params.status, 10);
 
+    // Sanity check so Heroku doesn't complain.
+    if (waitTime > 90000) waitTime = 90000;
+
     res.header('Content-Type', 'application/json');
     res.charSet('utf-8');
 
