@@ -1,0 +1,24 @@
+{
+  "name": "timeout-as-a-service",
+  "version": "1.0.0",
+  "description": "Timeout As A Service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelsanford/timeout-as-a-service.git"
+  },
+  "keywords": [
+    "npm",
+    "timeout",
+    "saas"
+  ],
+  "author": "Michael Sanford",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaelsanford/timeout-as-a-service/issues"
+  },
+  "homepage": "https://github.com/michaelsanford/timeout-as-a-service#readme"
+}
