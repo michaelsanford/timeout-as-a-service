@@ -34,6 +34,6 @@ server.head('/:time/:status', wait);
 
 server.get('/', error);
 
-server.listen(8080, () => {
-    console.log(`${server.name} online at ${server.url}`);
+server.listen(process.env.PORT || 8080, () => {
+    console.log(`Waiting (lol) for connections online at ${server.url}`);
 });
