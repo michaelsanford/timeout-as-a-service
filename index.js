@@ -28,7 +28,7 @@ error = (req, res, next) => {
 var server = restify.createServer();
 
 server.use(restify.CORS({
-    origins: ['https://s.codepen.io'],
+    origins: ['*'],
 }));
 
 server.pre(restify.pre.sanitizePath());
