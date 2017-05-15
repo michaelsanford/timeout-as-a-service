@@ -38,7 +38,7 @@ If anyone cares at all, just file an issue or submit a pull request to allow `Or
 
 No, it won't reflect a response elsewhere. Obviously. That would be insane.
 
-:info: If you specify a wait time greater than 90 seconds, it will limit it to 90 seconds.
+If you specify a wait time greater than 90 seconds, it will limit it to 90 seconds.
 
 # Example XMLHttpRequest
 
