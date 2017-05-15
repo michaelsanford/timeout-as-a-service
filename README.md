@@ -1,4 +1,4 @@
-# Timeout as a Sservice
+# Timeout as a Service
 I needed this for [a Pen](https://codepen.io/msanford/pen/GmGgBx) playing with offline detection.
 
 # API
@@ -36,9 +36,8 @@ If anyone cares at all, just file an issue or submit a pull request to allow `Or
 
 ## Security
 
-No, it won't reflect a response elsewhere. Obviously. That would be insane.
-
-If you specify a wait time greater than 90 seconds, it will limit it to 90 seconds.
+- No, it won't reflect a response elsewhere. Obviously. That would be insane.
+- If you specify a wait time greater than 90 seconds, it will limit it to 90 seconds.
 
 # Example XMLHttpRequest
 
