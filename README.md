@@ -30,9 +30,7 @@ You'll get back a JSON object once the request completes:
 
 ## CORS Support
 
-Currently, only CodePen is supposed for CORS.
-
-If anyone cares at all, just file an issue or submit a pull request to allow `Origin '*'` and I'll deploy it.
+CORS now allows `Origin '*'`, so you should be able to use this from anywhere.
 
 ## Security
 
