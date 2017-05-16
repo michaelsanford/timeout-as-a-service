@@ -1,4 +1,5 @@
-# Timeout as a Service
+# Timeout as a Service [![Build Status](https://travis-ci.org/michaelsanford/timeout-as-a-service.svg?branch=master)](https://travis-ci.org/michaelsanford/timeout-as-a-service) [![david-dm badge](https://david-dm.org/michaelsanford/timeout-as-a-service/status.svg)](https://github.com/michaelsanford/timeout-as-a-service/blob/master/package.json)
+
 I needed this for [a Pen](https://codepen.io/msanford/pen/GmGgBx) playing with offline detection.
 
 # API
