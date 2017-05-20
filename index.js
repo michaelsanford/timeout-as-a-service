@@ -1,11 +1,15 @@
+"use strict";
+
 var restify = require('restify');
 
-wait = (req, res, next) => {
+const wait = (req, res, next) => {
     let waitTime = parseInt(req.params.time, 10);
     let status = parseInt(req.params.status, 10);
 
     // Sanity check so Heroku doesn't complain.
-    if (waitTime > 90000) waitTime = 90000;
+    if (waitTime > 90000) {
+        waitTime = 90000;
+    }
 
     res.header('Content-Type', 'application/json');
     res.charSet('utf-8');
@@ -14,16 +18,16 @@ wait = (req, res, next) => {
         setTimeout(() => {
             res.send(status, {waitTime, status});
             next();
-        }, waitTime)
+        }, waitTime);
     } else {
         error(req, res, next);
     }
-}
+};
 
-error = (req, res, next) => {
+const error = (req, res, next) => {
     res.send(500, {error: 'Invalid Request Format: /timeout_in_miliseconds/status_code'});
     next();
-}
+};
 
 var server = restify.createServer();
 
