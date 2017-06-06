@@ -2,13 +2,16 @@
 
 var restify = require('restify');
 
+const MAX_WAIT_TIME = process.env.MAX_WAIT_TIME || 90000;
+const PORT = process.env.PORT || 8080;
+
 const wait = (req, res, next) => {
     let waitTime = parseInt(req.params.time, 10);
     let status = parseInt(req.params.status, 10);
 
     // Sanity check so Heroku doesn't complain.
-    if (waitTime > 90000) {
-        waitTime = 90000;
+    if (waitTime > MAX_WAIT_TIME) {
+        waitTime = MAX_WAIT_TIME;
     }
 
     res.header('Content-Type', 'application/json');
@@ -45,6 +48,6 @@ server.head('/:time/:status', wait);
 
 server.get('/', error);
 
-server.listen(process.env.PORT || 8080, () => {
-    console.log(`Waiting (lol) for connections online at ${server.url}`);
+server.listen(PORT, () => {
+    console.log(`Waiting (lol) for connections at ${server.url}; max wait of ${MAX_WAIT_TIME/1000} seconds.`);
 });
