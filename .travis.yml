@@ -1,8 +1,13 @@
+env:
+- MAX_WAIT_TIME="10"
+
 language: node_js
 node_js:
   - 6
   - 7
   - 8
+
 before_script:
   - npm install -g jshint
+
 script: npm test
