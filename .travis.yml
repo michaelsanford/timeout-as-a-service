@@ -1,5 +1,5 @@
 env:
-- MAX_WAIT_TIME="10"
+- MAX_WAIT_TIME="30000"
 
 language: node_js
 node_js:
