@@ -36,7 +36,7 @@ CORS now allows `Origin '*'`, so you should be able to use this from anywhere.
 ## Security
 
 - No, it won't reflect a response elsewhere. Obviously. That would be insane.
-- If you specify a wait time greater than 90 seconds, it will limit it to 90 seconds.
+- By default wait times are limited to 90 seconds unless you have specified a different maximum wait time with the `MAX_WAIT_TIME` environment variable.
 
 # Example XMLHttpRequest
 
