@@ -1,5 +1,8 @@
 env:
 - MAX_WAIT_TIME="30000"
+- CORS_ORIGINS = "*"
+- CORS_METHODS = "GET, PUT, POST, DELETE, HEAD"
+- MAX_INFLIGHT_REQUESTS = 100
 
 language: node_js
 node_js:

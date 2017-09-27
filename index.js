@@ -5,6 +5,11 @@ var restify = require('restify');
 const MAX_WAIT_TIME = process.env.MAX_WAIT_TIME || 90000;
 const PORT = process.env.PORT || 8080;
 
+const CORS_ORIGINS = process.env.CORS_ORIGINS || "*";
+const CORS_METHODS = process.env.CORS_METHODS || "GET, PUT, POST, DELETE, HEAD, OPTIONS";
+
+const MAX_INFLIGHT_REQUESTS = process.env.MAX_INFLIGHT_REQUESTS || 500;
+
 const wait = (req, res, next) => {
     let waitTime = parseInt(req.params.time, 10);
     let status = parseInt(req.params.status, 10);
@@ -34,11 +39,23 @@ const error = (req, res, next) => {
 
 var server = restify.createServer();
 
-server.use(restify.CORS({
-    origins: ['*'],
-}));
+server.use(
+    restify.CORS({
+        origins: CORS_ORIGINS,
+        headers: CORS_METHODS
+      })
+);
 
 server.pre(restify.pre.sanitizePath());
+
+server.pre(restify.plugins.inflightRequestThrottle({limit: MAX_INFLIGHT_REQUESTS, server}));
+
+server.opts(/.*/, function (req,res,next) {
+    res.header("Access-Control-Allow-Origin", CORS_ORIGINS);
+    res.header("Access-Control-Allow-Methods", req.header("Access-Control-Request-Method"));
+    res.header("Access-Control-Allow-Headers", req.header("Access-Control-Request-Headers"));
+    return next();
+});
 
 server.get('/:time/:status', wait);
 server.put('/:time/:status', wait);
