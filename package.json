@@ -1,6 +1,6 @@
 {
   "name": "timeout-as-a-service",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Timeout As A Service",
   "main": "index.js",
   "scripts": {
@@ -9,13 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/michaelsanford/timeout-as-a-service.git"
+    "url": "git+https://github.com/michaelsanford/timeout-as-a-service.git"
   },
   "keywords": [
     "npm",
     "timeout",
-    "saas",
-    "heroku"
+    "saas"
   ],
   "author": "Michael Sanford",
   "license": "MIT",
@@ -24,9 +23,9 @@
   },
   "homepage": "https://github.com/michaelsanford/timeout-as-a-service#readme",
   "engines": {
-    "node": ">=0.10"
+    "node": "7.9.0"
   },
   "dependencies": {
-    "restify": "^6.0.1"
+    "restify": "^4.3.0"
   }
 }
