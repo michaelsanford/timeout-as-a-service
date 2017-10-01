@@ -28,7 +28,8 @@ Please,
  1. When making your commits, please reference the issue number [in the commit message itself using fixes syntax][fixes].
  1. Please run `npm test` and make sure all tests pass (even though [Travis][travis] will also check).
  1. Submit a pull request (preferably [between 1 and 30 October][Hacktoberfest]).
- 1. 
+ 1. Be receptive to changes in Review and push new commits if necessary.
+ 1. `PR_REMAINING_FOR_SHIRT--` [;)][Hacktoberfest]
 
 ## Let's Talk!
 
@@ -40,7 +41,7 @@ Once you submit your pull request, please be receptive to changes during the cod
 
 ## Code of Conduct
 
-Please see the Code of Conduct.
+Please see the [Code of Conduct][code].
 
 [Hacktoberfest]: https://hacktoberfest.digitalocean.com
 [fork]: https://github.com/michaelsanford/timeout-as-a-service#fork-destination-box
