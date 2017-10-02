@@ -40,7 +40,7 @@ const error = (req, res, next) => {
 };
 
 var buildOnHeroku = (req, res, next) => {
-    var html = fs.readFileSync('templates/heroku-button.html', 'utf8')
+    var html = fs.readFileSync('templates/heroku-button.html', 'utf8');
     res.writeHead(200, {
         'Content-Type': 'text/html'
     });
