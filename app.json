@@ -1,0 +1,7 @@
+{
+    "name": "timeout-as-a-service",
+    "description": "Timeout As A Service",
+    "repository": "https://github.com/michaelsanford/timeout-as-a-service.git",
+    "logo": "https://node-js-sample.herokuapp.com/node.png",
+    "keywords": ["node", "express", "static","restify"]
+  }

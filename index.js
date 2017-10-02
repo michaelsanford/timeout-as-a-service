@@ -1,6 +1,8 @@
 "use strict";
 
 var restify = require('restify');
+var fs = require('fs');
+
 
 const MAX_WAIT_TIME = process.env.MAX_WAIT_TIME || 90000;
 const PORT = process.env.PORT || 8080;
@@ -28,8 +30,12 @@ const wait = (req, res, next) => {
 };
 
 const error = (req, res, next) => {
-    res.send(500, {error: 'Invalid Request Format: /timeout_in_miliseconds/status_code'});
-    next();
+   // res.send(500, {error: 'Invalid Request Format: /timeout_in_miliseconds/status_code'});
+   var html = fs.readFileSync('templates/heroku-button.html', 'utf8') 
+   res.writeHead(200, { 'Content-Type': 'text/html' });
+   res.write(html);
+   res.end();
+   next();
 };
 
 var server = restify.createServer();
