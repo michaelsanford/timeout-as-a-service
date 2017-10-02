@@ -2,6 +2,11 @@
 
 I needed this for [a Pen](https://codepen.io/msanford/pen/GmGgBx) playing with offline detection.
 
+# Deploying on Heroku
+For fast and simple deployment on Heroku, you can use the button below.
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 # API
 
 Sports a handeh-dandeh two-parameter API.
