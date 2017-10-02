@@ -2,6 +2,10 @@
 
 We welcome pull requests and feature additions, especially as part of [Hacktoberfest][Hacktoberfest].
 
+## Please don't send a PR without commenting on an issue first
+
+We welcome contributions, but _please don't send a pull requests out of the blue_. It creates unpleasant race conditions between concurrent human processes :wink: Read on.
+
 ## TL;DR
 
  1. Pick an [issue][issues],
