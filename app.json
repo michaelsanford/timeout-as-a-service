@@ -1,0 +1,6 @@
+{
+  "name": "Timeout as a service",
+  "description": "API that will respond with a given status after a given timeout",
+  "repository": "https://github.com/michaelsanford/timeout-as-a-service",
+  "keywords": ["timeout", "api", "nodejs", "restify", "npm", "ajax", "xmlhttprequest"]
+}
