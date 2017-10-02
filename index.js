@@ -21,7 +21,10 @@ const wait = (req, res, next) => {
 
     if (typeof waitTime === "number" && typeof status === "number" && waitTime !== null && status !== null) {
         setTimeout(() => {
-            res.send(status, {waitTime, status});
+            res.send(status, {
+                waitTime,
+                status
+            });
             next();
         }, waitTime);
     } else {
@@ -30,12 +33,20 @@ const wait = (req, res, next) => {
 };
 
 const error = (req, res, next) => {
-   // res.send(500, {error: 'Invalid Request Format: /timeout_in_miliseconds/status_code'});
-   var html = fs.readFileSync('templates/heroku-button.html', 'utf8') 
-   res.writeHead(200, { 'Content-Type': 'text/html' });
-   res.write(html);
-   res.end();
-   next();
+    res.send(500, {
+        error: 'Invalid Request Format: /timeout_in_miliseconds/status_code'
+    });
+    next();
+};
+
+var buildOnHeroku = (req, res, next) => {
+    var html = fs.readFileSync('templates/heroku-button.html', 'utf8')
+    res.writeHead(200, {
+        'Content-Type': 'text/html'
+    });
+    res.write(html);
+    res.end();
+    next();
 };
 
 var server = restify.createServer();
@@ -53,6 +64,8 @@ server.del('/:time/:status', wait);
 server.head('/:time/:status', wait);
 
 server.get('/', error);
+
+server.get('/build', buildOnHeroku);
 
 server.listen(PORT, () => {
     console.log(`Waiting (lol) for connections at ${server.url}; max wait of ${MAX_WAIT_TIME/1000} seconds.`);
