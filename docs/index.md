@@ -1,4 +1,4 @@
-## What is it?
+# What is it?
 
 It's basically a tool to help test offline detection and timeouts. I needed this for [a Pen](https://codepen.io/msanford/pen/GmGgBx) playing with offline detection.
 
