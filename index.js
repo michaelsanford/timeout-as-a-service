@@ -1,13 +1,16 @@
 'use strict';
 
-var restify = require('restify');
+const restify = require('restify');
 
 const error = require('./src/error');
 const wait = require('./src/wait');
 
-const PORT = process.env.PORT || 8080;
+const {
+    MAX_WAIT_TIME = 90000,
+    PORT = 8080
+} = process.env;
 
-var server = restify.createServer();
+let server = restify.createServer();
 
 server.use(
     restify.CORS({
@@ -28,6 +31,6 @@ server.get('/', error);
 server.listen(PORT, () => {
     console.log(
         `Waiting (lol) for connections at ${server.url}; max wait of ${MAX_WAIT_TIME /
-            1000} seconds.`
+        1000} seconds.`
     );
 });
