@@ -1,4 +1,4 @@
-const MAX_WAIT_TIME = process.env.MAX_WAIT_TIME || 90000;
+const { MAX_WAIT_TIME = 90000 } = process.env;
 
 const error = require('./error');
 
@@ -16,7 +16,7 @@ module.exports = function wait(req, res, next) {
         !Number.isNaN(status)
     ) {
         setTimeout(() => {
-            res.status(status).json({ waitTime, status });
+            res.json(status, { waitTime, status });
             next();
         }, waitTime);
     } else {
