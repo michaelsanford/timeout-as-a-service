@@ -32,7 +32,7 @@ describe('wait', () => {
         return new Promise(resolve => {
             // This also implicitly tests that `next` gets called.
             const startTime = Date.now();
-            wait(request, response, () => resolve(startTime))
+            wait(request, response, () => resolve(startTime));
         }).then(startTime => {
             const timeDifference = Date.now() - startTime;
             const data = JSON.parse(response._getData());
@@ -67,7 +67,7 @@ describe('wait', () => {
 
             // Assert
             expect(response.statusCode).to.equal(500);
-            expect(JSON.parse(response._getData())).to.have.property(
+            expect(response._getData()).to.have.property(
                 'error',
                 'Invalid Request Format: /<timeout_in_miliseconds>/<status_code>'
             );
@@ -94,7 +94,7 @@ describe('wait', () => {
 
             // Assert
             expect(response.statusCode).to.equal(500);
-            expect(JSON.parse(response._getData())).to.have.property(
+            expect(response._getData()).to.have.property(
                 'error',
                 'Invalid Request Format: /<timeout_in_miliseconds>/<status_code>'
             );
@@ -121,7 +121,7 @@ describe('wait', () => {
 
             // Assert
             expect(response.statusCode).to.equal(500);
-            expect(JSON.parse(response._getData())).to.have.property(
+            expect(response._getData()).to.have.property(
                 'error',
                 'Invalid Request Format: /<timeout_in_miliseconds>/<status_code>'
             );
@@ -148,7 +148,7 @@ describe('wait', () => {
 
             // Assert
             expect(response.statusCode).to.equal(500);
-            expect(JSON.parse(response._getData())).to.have.property(
+            expect(response._getData()).to.have.property(
                 'error',
                 'Invalid Request Format: /<timeout_in_miliseconds>/<status_code>'
             );

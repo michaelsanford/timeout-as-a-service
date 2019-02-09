@@ -1,40 +1,40 @@
 {
-    "name": "timeout-as-a-service",
-    "version": "1.0.0",
-    "description": "Timeout As A Service",
-    "main": "index.js",
-    "scripts": {
-        "lint": "jshint index.js",
-        "test": "jasmine",
-        "start": "node index.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/michaelsanford/timeout-as-a-service.git"
-    },
-    "keywords": [
-        "npm",
-        "timeout",
-        "saas"
-    ],
-    "author": "Michael Sanford",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/michaelsanford/timeout-as-a-service/issues"
-    },
-    "homepage": "https://github.com/michaelsanford/timeout-as-a-service#readme",
-    "engines": {
-        "node": ">=8.0.0"
-    },
-    "dependencies": {
-        "restify": "^7.7.0",
-        "restify-cors-middleware": "^1.1.1"
-    },
-    "devDependencies": {
-        "chai": "^4.2.0",
-        "jasmine": "^3.3.1",
-        "node-mocks-http": "^1.7.3",
-        "sinon": "^7.2.3",
-        "superagent": "^4.1.0"
-    }
+  "name": "timeout-as-a-service",
+  "version": "1.0.1",
+  "description": "Timeout As A Service",
+  "main": "index.js",
+  "scripts": {
+    "lint": "jshint index.js",
+    "test": "jasmine",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelsanford/timeout-as-a-service.git"
+  },
+  "keywords": [
+    "npm",
+    "timeout",
+    "saas"
+  ],
+  "author": "Michael Sanford",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaelsanford/timeout-as-a-service/issues"
+  },
+  "homepage": "https://github.com/michaelsanford/timeout-as-a-service#readme",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "restify": "^7.7.0",
+    "restify-cors-middleware": "^1.1.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "jasmine": "^3.3.1",
+    "node-mocks-http": "^1.7.3",
+    "sinon": "^7.2.3",
+    "superagent": "^4.1.0"
+  }
 }
