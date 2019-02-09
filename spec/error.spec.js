@@ -33,7 +33,7 @@ describe('error', () => {
 
     it('should respond with an error message', () => {
         // Assert
-        expect(JSON.parse(response._getData())).to.have.property(
+        expect(response._getData()).to.have.property(
             'error',
             'Invalid Request Format: /<timeout_in_miliseconds>/<status_code>'
         );
