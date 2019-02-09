@@ -4,6 +4,10 @@ env:
 language: node_js
 node_js:
   - 8
+  - 9
+  - 10
+  - 11
+  - node
 
 before_script:
   - npm install

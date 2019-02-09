@@ -1,6 +1,7 @@
 'use strict';
 
 const restify = require('restify');
+const corsMiddleware = require('restify-cors-middleware');
 
 const error = require('./src/error');
 const wait = require('./src/wait');
@@ -10,13 +11,14 @@ const {
     PORT = 8080
 } = process.env;
 
-let server = restify.createServer();
+const server = restify.createServer();
 
-server.use(
-    restify.CORS({
-        origins: ['*'],
-    })
-);
+const cors = corsMiddleware({
+    origins: [ '*' ],
+});
+
+server.pre(cors.preflight);
+server.use(cors.actual);
 
 server.pre(restify.pre.sanitizePath());
 

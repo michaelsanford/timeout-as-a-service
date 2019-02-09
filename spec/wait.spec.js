@@ -69,12 +69,12 @@ describe('wait', () => {
             expect(response.statusCode).to.equal(500);
             expect(JSON.parse(response._getData())).to.have.property(
                 'error',
-                'Invalid Request Format: /timeout_in_miliseconds/status_code'
+                'Invalid Request Format: /<timeout_in_miliseconds>/<status_code>'
             );
             expect(next.calledOnce).to.be.true;
         });
 
-        it('should error if typeof status is not number', () => {
+        it('should error if status is not in the allowed range', () => {
             // Arrange
             const time = 1000;
             const status = 'abc';
@@ -96,7 +96,7 @@ describe('wait', () => {
             expect(response.statusCode).to.equal(500);
             expect(JSON.parse(response._getData())).to.have.property(
                 'error',
-                'Invalid Request Format: /timeout_in_miliseconds/status_code'
+                'Invalid Request Format: /<timeout_in_miliseconds>/<status_code>'
             );
             expect(next.calledOnce).to.be.true;
         });
@@ -123,7 +123,7 @@ describe('wait', () => {
             expect(response.statusCode).to.equal(500);
             expect(JSON.parse(response._getData())).to.have.property(
                 'error',
-                'Invalid Request Format: /timeout_in_miliseconds/status_code'
+                'Invalid Request Format: /<timeout_in_miliseconds>/<status_code>'
             );
             expect(next.calledOnce).to.be.true;
         });
@@ -150,7 +150,7 @@ describe('wait', () => {
             expect(response.statusCode).to.equal(500);
             expect(JSON.parse(response._getData())).to.have.property(
                 'error',
-                'Invalid Request Format: /timeout_in_miliseconds/status_code'
+                'Invalid Request Format: /<timeout_in_miliseconds>/<status_code>'
             );
             expect(next.calledOnce).to.be.true;
         });

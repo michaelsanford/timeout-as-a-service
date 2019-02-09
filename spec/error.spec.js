@@ -26,16 +26,16 @@ describe('error', () => {
         error(request, response, next);
     });
 
-    it('should response with 500', () => {
+    it('should respond with 500', () => {
         // Assert
         expect(response.statusCode).to.equal(500);
     });
 
-    it('should response with an error message', () => {
+    it('should respond with an error message', () => {
         // Assert
         expect(JSON.parse(response._getData())).to.have.property(
             'error',
-            'Invalid Request Format: /timeout_in_miliseconds/status_code'
+            'Invalid Request Format: /<timeout_in_miliseconds>/<status_code>'
         );
     });
 

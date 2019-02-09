@@ -1,4 +1,6 @@
-# Timeout as a Service [![Build Status](https://travis-ci.org/michaelsanford/timeout-as-a-service.svg?branch=master)](https://travis-ci.org/michaelsanford/timeout-as-a-service) [![david-dm badge](https://david-dm.org/michaelsanford/timeout-as-a-service/status.svg)](https://github.com/michaelsanford/timeout-as-a-service/blob/master/package.json) ![Heroku](http://heroku-badge.herokuapp.com/?app=timeout-as-a-service&style=flat&svg=1&root=/0/200)
+# Timeout as a Service
+
+[![Build Status](https://travis-ci.org/michaelsanford/timeout-as-a-service.svg?branch=master)](https://travis-ci.org/michaelsanford/timeout-as-a-service) [![david-dm badge](https://david-dm.org/michaelsanford/timeout-as-a-service/status.svg)](https://github.com/michaelsanford/timeout-as-a-service/blob/master/package.json) ![Heroku](http://heroku-badge.herokuapp.com/?app=timeout-as-a-service&style=flat&svg=1&root=/0/200)
 
 I needed this for [a Pen](https://codepen.io/msanford/pen/GmGgBx) playing with offline detection.
 
@@ -10,7 +12,7 @@ Sports a handeh-dandeh two-parameter API.
 
 Call the API with your choice of `GET`, `PUT`, `POST`, `DELETE` with
 - a timeout in miliseconds, and
-- a status code you want returned
+- a valid status code you want returned
 
 ```
 https://timeout-as-a-service.herokuapp.com/<timeout-in_miliseconds>/<status_code>
@@ -31,7 +33,7 @@ You'll get back a JSON object once the request completes:
 
 ## CORS Support
 
-CORS now allows `Origin '*'`, so you should be able to use this from anywhere.
+CORS allows `Origin '*'`, so you should be able to use this from anywhere.
 
 ## Security
 
