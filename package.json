@@ -24,16 +24,17 @@
     },
     "homepage": "https://github.com/michaelsanford/timeout-as-a-service#readme",
     "engines": {
-        "node": ">=7.9.0"
+        "node": ">=8.0.0"
     },
     "dependencies": {
-        "restify": "^4.3.0"
+        "restify": "^7.7.0",
+        "restify-cors-middleware": "^1.1.1"
     },
     "devDependencies": {
-        "chai": "^4.1.2",
-        "jasmine": "^2.8.0",
-        "node-mocks-http": "^1.6.5",
-        "sinon": "^4.0.0",
-        "superagent": "^3.6.2"
+        "chai": "^4.2.0",
+        "jasmine": "^3.3.1",
+        "node-mocks-http": "^1.7.3",
+        "sinon": "^7.2.3",
+        "superagent": "^4.1.0"
     }
 }
