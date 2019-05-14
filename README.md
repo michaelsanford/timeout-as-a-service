@@ -1,6 +1,7 @@
 # Timeout as a Service
 
-[![Build Status](https://travis-ci.org/michaelsanford/timeout-as-a-service.svg?branch=master)](https://travis-ci.org/michaelsanford/timeout-as-a-service) [![david-dm badge](https://david-dm.org/michaelsanford/timeout-as-a-service/status.svg)](https://github.com/michaelsanford/timeout-as-a-service/blob/master/package.json) ![Heroku](http://heroku-badge.herokuapp.com/?app=timeout-as-a-service&style=flat&svg=1&root=/0/200)
+[![Build Status](https://travis-ci.org/michaelsanford/timeout-as-a-service.svg?branch=master)](https://travis-ci.org/michaelsanford/timeout-as-a-service)
+[![DepShield Badge](https://depshield.sonatype.org/badges/michaelsanford/timeout-as-a-service/depshield.svg)](https://depshield.github.io)
 
 I needed this for [a Pen](https://codepen.io/msanford/pen/GmGgBx) playing with offline detection.
 
