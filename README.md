@@ -1,5 +1,6 @@
 # Timeout as a Service
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c2bf8ccf1ca54e32b6bb89f3889c159e)](https://app.codacy.com/app/michaelsanford/timeout-as-a-service?utm_source=github.com&utm_medium=referral&utm_content=michaelsanford/timeout-as-a-service&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.org/michaelsanford/timeout-as-a-service.svg?branch=master)](https://travis-ci.org/michaelsanford/timeout-as-a-service)
 [![DepShield Badge](https://depshield.sonatype.org/badges/michaelsanford/timeout-as-a-service/depshield.svg)](https://depshield.github.io)
 
