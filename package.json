@@ -27,7 +27,7 @@
     "node": ">=8.0.0"
   },
   "dependencies": {
-    "restify": "^8.4.0",
+    "restify": "^8.5.1",
     "restify-cors-middleware": "^1.1.1"
   },
   "devDependencies": {
