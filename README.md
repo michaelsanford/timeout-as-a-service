@@ -3,7 +3,9 @@
 [![Node.js CI](https://github.com/michaelsanford/timeout-as-a-service/actions/workflows/node.js.yml/badge.svg)](https://github.com/michaelsanford/timeout-as-a-service/actions/workflows/node.js.yml) 
 [![CodeQL](https://github.com/michaelsanford/timeout-as-a-service/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/michaelsanford/timeout-as-a-service/actions/workflows/codeql-analysis.yml)
 
-I needed this for [a Pen](https://codepen.io/msanford/pen/GmGgBx) playing with offline detection.
+I "needed" this for [a Pen](https://codepen.io/msanford/pen/GmGgBx) playing with offline detection. It is, of course, a silly idea. Parafoxically it has found one or two quasi-legitimate uses.
+
+It's now archived.
 
 # Deploying on Heroku
 For fast and simple deployment on Heroku, you can use the button below.
